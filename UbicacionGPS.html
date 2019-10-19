@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+
+var map;
+var markers = [];
+var marker_number=0;
+
+	// setInterval(initMap,3000)
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 2,
+          center: new google.maps.LatLng(2.8,-187.3),
+          mapTypeId: 'terrain'
+        });
+
+        // Create a <script> tag and set the USGS URL as the source.
+        var script = document.createElement('script');
+        // This example uses a local copy of the GeoJSON stored at
+        // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
+        script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
+        document.getElementsByTagName('head')[0].appendChild(script);
+      }
+
+      // Loop through the results array and place a marker for each
+      // set of coordinates.
+
+
+      window.eqfeed_callback = function(results) {
+        for (var i = 0; i < results.features.length; i++) {
+          var coords = results.features[i].geometry.coordinates;
+          markers.push(coords);
+        }
+        //console.log(markers)
+      }
+
+
+//setInterval(addMarker,3000); //DESCOMENTAR PARA VER LA MAGIA :3
+
+
+
+      function addMarker(){
+
+
+      	var latLng = new google.maps.LatLng(markers[marker_number][1],markers[marker_number][0]);
+          var marker = new google.maps.Marker({
+            position: latLng,
+            map: map
+          });
+
+          marker_number = marker_number + 1;
+
+      }
+
+
+
+
+      // window.eqfeed_callback = function(results) {
+        
+      //     var coords = results.features[marker_number].geometry.coordinates;
+      //     markers.push(coords);
+      //     console.log(markers);
+      //     marker_number = marker_number + 1;
+
+      //     for(i = 0; i<markers.length; i++){
+      //     	var latLng = new google.maps.LatLng(markers[i][1],markers[i][0]);
+	     //      var marker = new google.maps.Marker({
+	     //        position: latLng,
+	     //        map: map
+	     //      });
+
+
+
+      //     }
+
+
+
+      //     // var latLng = new google.maps.LatLng(coords[1],coords[0]);
+      //     // var marker = new google.maps.Marker({
+      //     //   position: latLng,
+      //     //   map: map
+      //     // });
+        
+      // }
+
+
+
+
+
+
+
+		
+		// setInterval(initMap,3000)
+
+
+		// function initMap() {
+
+
+		// 	map = new google.maps.Map(document.getElementById('map'), {
+  //         zoom: 2,
+  //         center: new google.maps.LatLng(2.8,-187.3),
+  //         mapTypeId: 'terrain'
+  //       });
+
+
+		// }
+
+
+
+
+    //   function initMap() {
+    //     map = new google.maps.Map(document.getElementById('map'), {
+    //       zoom: 2,
+    //       center: new google.maps.LatLng(2.8,-187.3),
+    //       mapTypeId: 'terrain'
+    //     });
+
+    //     // Create a <script> tag and set the USGS URL as the source.
+    //     var script = document.createElement('script');
+    //     // This example uses a local copy of the GeoJSON stored at
+    //     // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
+    //     script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
+    //     document.getElementsByTagName('head')[0].appendChild(script);
+    //   }
+
+    //   // Loop through the results array and place a marker for each
+    //   // set of coordinates.
+    //   window.eqfeed_callback = function(results) {
+    //     for (var i = 0; i < 10; i++) {
+    //       var coords = results.features[i].geometry.coordinates;
+    //       var latLng = new google.maps.LatLng(coords[1],coords[0]);
+    //       //sleep(5000);
+    //       //drawMarker(latLng);
+
+    //       	setTimeout(function(){ 
+
+    //     var marker = new google.maps.Marker({
+    //         position: latLng,
+    //         map: map});
+    // }, 3000); 
+
+
+
+
+    //     //   var marker = new google.maps.Marker({
+    //     //     position: latLng,
+    //     //     map: map
+    //     //   });
+    //     // }
+    // }
+    //     console.log(results.features);
+    //   }
+
+
+    //  	function drawMarker(latLng){
+    //  		var marker = new google.maps.Marker({
+    //         position: latLng,
+    //         map: map});
+    //         console.log("hola")
+
+
+    //  	}
+
+    </script>
+
+<!-- 
+    <script>
+    	var map;
+var markers = [];
+
+setInterval(refreshMapa, 3000);
+
+function initialize() {
+  var mapOptions = {
+      zoom: 12,
+      center: new google.maps.LatLng(-25.4848801,-49.2918938),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  var locations = [];
+
+
+
+
+
+
+
+
+    </script> -->
+
+
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDStzomf7kz53q1ZXt477Lx7hAap-Ht4M&callback=initMap">
+    </script>
+  </body>
+</html>
