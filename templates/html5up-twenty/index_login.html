@@ -26,21 +26,10 @@
 								<a href="#">Informacion</a>
 								<ul>
 									<li><a href="no-sidebar.html">Detalles</a></li>
-									<li><a href="ubicacion_malla_gps.html">Ubicacion GPS</a></li>
-									<li><a href="left-sidebar.html">Left Sidebar</a></li>
-									<li><a href="right-sidebar.html">Right Sidebar</a></li>
-									<li><a href="no-sidebar.html">No Sidebar</a></li>
-									<li><a href="contact.html">Contact</a></li>
-									<li class="submenu">
-										<a href="#">Submenu</a>
-										<ul>
-											<li><a href="#">Dolore Sed</a></li>
-											<li><a href="#">Consequat</a></li>
-											<li><a href="#">Lorem Magna</a></li>
-											<li><a href="#">Sed Magna</a></li>
-											<li><a href="#">Ipsum Nisl</a></li>
-										</ul>
-									</li>
+									<li><a href="left-sidebar.html">Great Pacific Patch</a></li>
+									<li><a href="ubicacion_malla_gps.html">Ubicación GPS</a></li>
+									<li><a href="contact.html">Contáctanos</a></li>
+									
 								</ul>
 							</li>
 							<li><a href="./index.html" class="button primary">Logout</a></li>
@@ -60,7 +49,7 @@
 					-->
 					<div class="inner">
 
-						<img src="images/LOGOv1.png" style="height:50%;width: 50%">
+						<img src="images/LOGOv1.png" style="height:30%;width: 50%">
 						<footer>
 							<ul class="buttons stacked">
 								<li><a href="#tell_more" class="button fit scrolly">Mas información</a></li>
@@ -74,37 +63,61 @@
 			<!-- Main -->
 				<article id="main">
 
-					<header class="special container">
+					<header>
 						<div class = "principal-data">
 							<div class="count-collected">
 								<div id="img-trash">
-									<img src="assets/css/images/basura.png" alt="perfil" class="perfil-img" href="profesor">
+									<img style="width:100px; height:80px;" src="assets/css/images/basura.png" alt="perfil" class="perfil-img" href="profesor">
 								</div>
 								<div id="content-trash">
-									<h1>80,000 kg</h1>
+									<span id="countdown">80000000</span> Kg
+									<script>
+										var seconds = document.getElementById("countdown").textContent;
+										var countdown = setInterval(function() {
+											seconds--;
+											document.getElementById("countdown").textContent = seconds;
+											if (seconds <= 0) clearInterval(countdown);
+										}, 1000);
+									</script>
 									<p>Toneladas en el Oceano</p>
 								</div>
 							</div>
 							<div class="count-collected">
 								<div id="img-collected-trash">
-									<img src="assets/css/images/reciclaje.png" alt="perfil" class="perfil-img" href="profesor">
+									<img style="width:100px; height:80px;"src="assets/css/images/reciclaje.png" alt="perfil" class="perfil-img" href="profesor">
 								</div>
 								<div id="content-collected-trash">
-									<h1>100 kg</h1>
+									<span id="countup">0</span> kg
+									<script>
+										var secondss = document.getElementById("countup").textContent;
+										var countup = setInterval(function() {
+											secondss++;
+											document.getElementById("countup").textContent = secondss;
+											if (secondss <= 0) clearInterval(countup);
+										}, 1000);
+									</script>
 									<p>Toneladas Recuperadas</p>
 								</div>
 							</div>
 							<div class="count-collected">
 								<div id="img-collected-money">
-									<img src="assets/css/images/money.png" alt="perfil" class="perfil-img" href="profesor">
+									<img style="width:100px; height:80px;"src="assets/css/images/money.png" alt="perfil" class="perfil-img" href="profesor">
 								</div>
 								<div id="content-collected-money">
-									<h1>$ 100,00</h1>
+									$ <span id="countmoney">0</span> 
+									<script>
+										var secondsss = document.getElementById("countmoney").textContent;
+										var countmoney = setInterval(function() {
+											secondsss=parseInt(secondsss)+parseInt(Math.random()*100);
+											document.getElementById("countmoney").textContent = secondsss;
+											if (secondsss <= 0) clearInterval(countmoney);
+										}, 5000);
+									</script>
 									<p>Aporte del Mundo</p>
 								</div>
 							</div>
 						</div>
-						<span class="icon solid fa-chart-bar"></span>
+						<div class="special container alinetext">
 						<h2>Tu <strong>aporte</strong> puede hacer la diferencia
 						<br />
 						se parte del proyecto de reciclaje más ambicioso de la historia.</h2>
@@ -114,6 +127,7 @@
 						juntos tenemos el poder de generar un gran impacto 
 						<br />
 						la misión empieza ahora, toma la desición y <a href="http://html5up.net/license"> Súmate al cambio</a>,  que sea divertido, que sea con amigos!</p>
+						</div>
 					</header>
 
 					<!-- One -->
@@ -122,9 +136,9 @@
 								<div class="col-8 col-12-narrower">
 
 									<header>
-										<h2>Con el objetivo de disminuir la contaminacion en el oceano del Pacifico.</h2>
+										<h2>Con el objetivo de disminuir la contaminacion en el oceano del Pacífico.</h2>
 									</header>
-									<p>RE-Oceans  hace uso de una embarcación automata que recolecta basura mediante una banda móvil, la cual la deposita en mallas que pueden ser recogidas por otros navíos gracias a la ubicación monitoreada en esta pagina web. Sumate a nosotros siendo parte de nuestras campañas o aportando donaciones por medio de Patron o KickStarted para que continuemos limpiando los desechos de nuestros océanos.</p>
+									<p>RE-Oceans  hace uso de una embarcación autómata que recolecta basura mediante una banda móvil, la cual es depositada en mallas que pueden ser recogidas por otros navíos gracias a la ubicación monitoreada en esta página web. Súmate a nosotros siendo parte de nuestras campañas o aportando donaciones por medio de Patron o KickStarted para que continuemos limpiando los desechos de nuestros océanos.</p>
 									<!-- <footer>
 										<ul class="buttons">
 											<li><a href="#" class="button">Find Out More</a></li>
@@ -153,7 +167,7 @@
 								<div class="col-4 col-12-narrower">
 
 									<section>
-										<span class="icon solid featured fa-check"></span>
+										<img style="width:400px; height:300px;" src="./assets/css/images/bote.png" alt="foto" class="prototype-img" href="curso">
 										<header>
 											<h3>This is Something</h3>
 										</header>
@@ -164,7 +178,7 @@
 								<div class="col-4 col-12-narrower">
 
 									<section>
-										<span class="icon solid featured fa-check"></span>
+										<img style="width:400px; height:300px;" src="./assets/css/images/bote2.png" alt="foto" class="prototype-img" href="curso">
 										<header>
 											<h3>Also Something</h3>
 										</header>
@@ -198,11 +212,12 @@
 
 							<div class="swiper-container">
 								<div class="swiper-wrapper">
-								<div class="card swiper-slide">
+								<div class="swiper-slide">
 									<div class="card">
-										<a href ="curso"><img src="./assets/css/images/plastico.jpg" alt="foto" class="card-img" href="curso"></a>
-											<p><a href ="profesor">Mision 1</a></p>
-											<h5><a href ="curso"></a>Lanzamiento</h5>
+										<a href ="curso"><img src="./assets/css/images/mision1.jpg" alt="foto" class="card-img" href="curso"></a>
+											<h5><a href ="curso"></a>Ocean Clean Up</h5>
+											<p><a href ="https://theoceancleanup.com/">La iniciativa de un joven Holandes, quien encontró que hay más basura que peces en el oceano
+											y ahora mismo se encuentra en la misión de recuperar el 50% de este cada 5 años...</a></p>
 											<ul class ="social-media">
 												<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
 												<li><a href="#"><i class="fab fa-instagram"></i></a></li>
@@ -211,11 +226,12 @@
 									</div>
 								</div>
 										
-								<div class="card swiper-slide">
+								<div class="swiper-slide">
 									<div class="card">
-										<a href ="curso"><img src="./assets/css/images/plastico.jpg" alt="foto" class="card-img" href="curso"></a>
-											<p><a href ="profesor">Mision 2</a></p>
-											<h5><a href ="curso">Encuentro con el mounstro</a></h5>
+										<a href ="curso"><img src="./assets/css/images/mision2.jpg" alt="foto" class="card-img" href="curso"></a>
+											<h5><a href ="curso">Bote Reciclador</a></h5>
+											<p><a href ="http://www.canalclima.com/este-invento-podria-ser-la-solucion-definitiva-para-limpiar-los-oceanos/">Un dispositivo que permitirá recuperar nuestros oceanos y salvar a la vida que haita en el</a></p>
+
 											<ul class ="social-media">
 												<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
 												<li><a href="#"><i class="fab fa-instagram"></i></a></li>
@@ -224,11 +240,11 @@
 									</div>
 								</div>
 										
-								<div class="card swiper-slide">
+								<div class="swiper-slide">
 									<div class="card">
-										<a href ="curso"><img src="./assets/css/images/plastico.jpg" alt="foto" class="card-img" href="curso"></a>
-											<p><a href ="profesor">Misión 3</a></p>
+										<a href ="curso"><img src="./assets/css/images/mision3.jpg" alt="foto" class="card-img" href="curso"></a>
 											<h5><a href ="curso">Sumando personas</a></h5>
+											<p><a href ="https://www.farodevigo.es/gran-vigo/2019/09/30/viguesa-quiere-salvar-oceano/2178651.html">La lucha es ahora, ni un paso atrás, juntos podemos lograrlo si estas dispuesto a caminar junto a nosotros!</a></p>
 											<ul class ="social-media">
 												<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
 												<li><a href="#"><i class="fab fa-instagram"></i></a></li>
@@ -237,11 +253,12 @@
 									</div>
 								</div>
 
-								<div class="card swiper-slide">
+								<div class="swiper-slide">
 									<div class="card">
-										<a href ="curso"><img src="./assets/css/images/plastico.jpg" alt="foto" class="card-img" href="curso"></a>
-											<p><a href ="profesor">Misión 4</a></p>
+										<a href ="curso"><img src="./assets/css/images/mision4.jpg" alt="foto" class="card-img" href="curso"></a>
 											<h5><a href ="curso">Influencers</a></h5>
+											<p><a href ="https://www.elllobregat.com/noticia/17592/cornell/el-fundador-de-ecoalf-pide-limpiar-los-oceanos-en-el-cornell-creacio-frum.html">Todos somos parte del problema y debemos tomar responsabilidad de nuestro paso 
+											por el mundo, es hora de hacer cociencia unámonos todos</a></p>
 											<ul class ="social-media">
 												<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
 												<li><a href="#"><i class="fab fa-instagram"></i></a></li>
@@ -249,19 +266,6 @@
 											</ul>
 									</div>
 								</div>
-
-								<div class="card swiper-slide">
-									<div class="card">
-										<a href ="curso"><img src="./assets/css/images/plastico.jpg" alt="foto" class="card-img" href="curso"></a>
-											<p><a href ="profesor">Misión 5</a></p>
-											<h5><a href ="curso">Plan en marcha</a></h5>
-											<ul class ="social-media">
-												<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-												<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-												<li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-											</ul>
-									</div>
-								</div>   
 								
 								</div>
 								<!-- Add Pagination -->
@@ -307,7 +311,6 @@
 					</ul>
 
 				</footer>
-
 
 		</div>
 
