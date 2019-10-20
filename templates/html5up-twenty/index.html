@@ -58,7 +58,7 @@
 					-->
 					<div class="inner">
 
-						<img src="images/LOGOv1.png" style="height:50%;width: 50%">
+						<img src="images/LOGOv1.png" style="height:30%;width: 50%">
 						<footer>
 							<ul class="buttons stacked">
 								<li><a href="#tell_more" class="button fit scrolly">Mas información</a></li>
@@ -72,37 +72,61 @@
 			<!-- Main -->
 				<article id="main">
 
-					<header class="special container">
+					<header>
 						<div class = "principal-data">
 							<div class="count-collected">
 								<div id="img-trash">
-									<img src="assets/css/images/basura.png" alt="perfil" class="perfil-img" href="profesor">
+									<img style="width:100px; height:80px;" src="assets/css/images/basura.png" alt="perfil" class="perfil-img" href="profesor">
 								</div>
 								<div id="content-trash">
-									<h1>80,000 kg</h1>
+									<span id="countdown">80000000</span> Kg
+									<script>
+										var seconds = document.getElementById("countdown").textContent;
+										var countdown = setInterval(function() {
+											seconds--;
+											document.getElementById("countdown").textContent = seconds;
+											if (seconds <= 0) clearInterval(countdown);
+										}, 1000);
+									</script>
 									<p>Toneladas en el Oceano</p>
 								</div>
 							</div>
 							<div class="count-collected">
 								<div id="img-collected-trash">
-									<img src="assets/css/images/reciclaje.png" alt="perfil" class="perfil-img" href="profesor">
+									<img style="width:100px; height:80px;"src="assets/css/images/reciclaje.png" alt="perfil" class="perfil-img" href="profesor">
 								</div>
 								<div id="content-collected-trash">
-									<h1>100 kg</h1>
+									<span id="countup">0</span> kg
+									<script>
+										var secondss = document.getElementById("countup").textContent;
+										var countup = setInterval(function() {
+											secondss++;
+											document.getElementById("countup").textContent = secondss;
+											if (secondss <= 0) clearInterval(countup);
+										}, 1000);
+									</script>
 									<p>Toneladas Recuperadas</p>
 								</div>
 							</div>
 							<div class="count-collected">
 								<div id="img-collected-money">
-									<img src="assets/css/images/money.png" alt="perfil" class="perfil-img" href="profesor">
+									<img style="width:100px; height:80px;"src="assets/css/images/money.png" alt="perfil" class="perfil-img" href="profesor">
 								</div>
 								<div id="content-collected-money">
-									<h1>$ 100,00</h1>
+									$ <span id="countmoney">0</span> 
+									<script>
+										var secondsss = document.getElementById("countmoney").textContent;
+										var countmoney = setInterval(function() {
+											secondsss=parseInt(secondsss)+parseInt(Math.random()*100);
+											document.getElementById("countmoney").textContent = secondsss;
+											if (secondsss <= 0) clearInterval(countmoney);
+										}, 5000);
+									</script>
 									<p>Aporte del Mundo</p>
 								</div>
 							</div>
 						</div>
-						<span class="icon solid fa-chart-bar"></span>
+						<div class="special container alinetext">
 						<h2>Tu <strong>aporte</strong> puede hacer la diferencia
 						<br />
 						se parte del proyecto de reciclaje más ambicioso de la historia.</h2>
@@ -112,6 +136,7 @@
 						juntos tenemos el poder de generar un gran impacto 
 						<br />
 						la misión empieza ahora, toma la desición y <a href="http://html5up.net/license"> Súmate al cambio</a>,  que sea divertido, que sea con amigos!</p>
+						</div>
 					</header>
 
 					<!-- One -->
