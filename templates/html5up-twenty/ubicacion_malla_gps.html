@@ -124,17 +124,27 @@ var marker_number=0;
       }
 
 
-	setInterval(addMarker,3000); //DESCOMENTAR PARA VER LA MAGIA :3
+setInterval(addMarker,3000); //DESCOMENTAR PARA VER LA MAGIA :3
 
 
 
       function addMarker(){
 
+      	var iconBase =
+            'https://developers.google.com/maps/documentation/javascript/examples/full/images/';
+
+         
+          var icons = {
+          parking: {
+            icon: iconBase + 'plastico.png'
+          }
+        };
 
       	var latLng = new google.maps.LatLng(markers[marker_number][1],markers[marker_number][0]);
           var marker = new google.maps.Marker({
             position: latLng,
-            map: map
+            map: map,
+            icon: 'images/plas01.png'
           });
 
           marker_number = marker_number + 1;
