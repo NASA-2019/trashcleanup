@@ -42,9 +42,11 @@
 }
 
 .card {
+    list-style: none;
+    margin: none !important;
     border: none;
-    width: auto;
-    height: 21rem;
+    width: 30rem;
+    height: 32rem !important;
     background-color: #fff;
     display: flex !important;
     flex-direction: column;
@@ -58,8 +60,10 @@
 }
 
 .card p {
+    padding: 40px;
+    list-style: none;
     font-size: 9pt;
-    text-align: left;
+    text-align: center;
 }
 
 .card a {
@@ -75,7 +79,7 @@
 
 .card h5 {
     text-align: left;
-    font-size: 12pt;
+    font-size: 10pt;
 }
 
 .card .card-img {
@@ -105,6 +109,11 @@ a .perfil-img {
     margin-left: -6.5rem;
     z-index: 999;
     border: 1px solid #ebeef8;
+}
+
+¨ .prototype-img {
+    width: 0.6rem;
+    height: 0.6rem;
 }
 
 #social-media {
