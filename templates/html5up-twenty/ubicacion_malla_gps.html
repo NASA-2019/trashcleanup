@@ -27,25 +27,15 @@
 					<h1 id="logo"><a href="index_login.html">Re-Oceans<span></span></a></h1>
 					<nav id="nav">
 						<ul>
-							<li class="current"><a href="index.html">Usuario01</a></li>
+							<!-- <li class="current"><a href="index.html">Usuario01</a></li> -->
 							<li class="submenu">
-								<a href="#">Layouts</a>
+								<a href="#">Información</a>
 								<ul>
-									<li><a href="ubicacion_malla_gps.html">Ubicacion GPS</a></li>
-									<li><a href="left-sidebar.html">Left Sidebar</a></li>
-									<li><a href="right-sidebar.html">Right Sidebar</a></li>
-									<li><a href="no-sidebar.html">No Sidebar</a></li>
-									<li><a href="contact.html">Contact</a></li>
-									<li class="submenu">
-										<a href="#">Submenu</a>
-										<ul>
-											<li><a href="#">Dolore Sed</a></li>
-											<li><a href="#">Consequat</a></li>
-											<li><a href="#">Lorem Magna</a></li>
-											<li><a href="#">Sed Magna</a></li>
-											<li><a href="#">Ipsum Nisl</a></li>
-										</ul>
-									</li>
+									<li><a href="no-sidebar.html">Detalles</a></li>
+									<li><a href="left-sidebar.html">Great Pacific Patch</a></li>
+									<li><a href="ubicacion_malla_gps.html">Ubicación GPS</a></li>
+									<li><a href="contact.html">Contáctanos</a></li>
+									
 								</ul>
 							</li>
 							<li><a href="index.html" class="button primary">Logout</a></li>
@@ -95,6 +85,11 @@ var map;
 var markers = [];
 var marker_number=0;
 
+var markers2=[[21.989418, -148.785968],[14.951717, -165.651510],[31.980501, -153.772779],[-6.360031, -136.158186],[-15.273299, -133.346071],[-27.787762, -136.801061],[-27.339046, -113.847009],[-9.364142, -123.627796],[5.034329, -130.310423],[20.069684, -141.275618],[-9.395963, -120.454919],[-23.267565, -112.431905],[-25.135745, -127.069732],[-14.794865, -140.079254],[-28.288077, -114.981496]]
+
+
+
+
 	// setInterval(initMap,3000)
 
       function initMap() {
@@ -120,8 +115,12 @@ var marker_number=0;
         for (var i = 0; i < results.features.length; i++) {
           var coords = results.features[i].geometry.coordinates;
           markers.push(coords);
+        	//console.log(coords);
         }
       }
+
+      //console.log(coords);
+      console.log(markers);
 
 
 setInterval(addMarker,3000); //DESCOMENTAR PARA VER LA MAGIA :3
@@ -129,7 +128,7 @@ setInterval(addMarker,3000); //DESCOMENTAR PARA VER LA MAGIA :3
 
 
       function addMarker(){
-
+      	console.log(markers2);
       	var iconBase =
             'https://developers.google.com/maps/documentation/javascript/examples/full/images/';
 
@@ -140,7 +139,7 @@ setInterval(addMarker,3000); //DESCOMENTAR PARA VER LA MAGIA :3
           }
         };
 
-      	var latLng = new google.maps.LatLng(markers[marker_number][1],markers[marker_number][0]);
+      	var latLng = new google.maps.LatLng(markers2[marker_number][0],markers2[marker_number][1]);
           var marker = new google.maps.Marker({
             position: latLng,
             map: map,
