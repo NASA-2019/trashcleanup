@@ -10,6 +10,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/counter.css" />
+		<link rel="stylesheet" href="assets/slide/css/swiper.min.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="index is-preload">
@@ -17,14 +19,12 @@
 
 			<!-- Header -->
 				<header id="header" class="alt">
-					<h1 id="logo"><a href="index.html">Re-Oceans<span></span></a></h1>
 					<nav id="nav">
 						<ul>
-							<li class="current"><a href="index.html">Welcome</a></li>
+							<li class="current"><a href="index.html">Bienvenido</a></li>
 							<li class="submenu">
 								<a href="#">Layouts</a>
 								<ul>
-									<li><a href="contact.html">Ubicacion malla GPS</a></li>
 									<li><a href="left-sidebar.html">Left Sidebar</a></li>
 									<li><a href="right-sidebar.html">Right Sidebar</a></li>
 									<li><a href="no-sidebar.html">No Sidebar</a></li>
@@ -41,7 +41,8 @@
 									</li>
 								</ul>
 							</li>
-							<li><a href="index.html" class="button primary">Logout</a></li>
+							<li><a href="./index.html" class="button primary">Logout</a></li>
+							
 						</ul>
 					</nav>
 				</header>
@@ -57,17 +58,10 @@
 					-->
 					<div class="inner">
 
-						<header>
-							<h2>TWENTY</h2>
-						</header>
-						<p>This is <strong>Twenty</strong>, a free
-						<br />
-						responsive template
-						<br />
-						by <a href="http://html5up.net">HTML5 UP</a>.</p>
+						<img src="images/LOGOv1.png" style="height:50%;width: 50%">
 						<footer>
 							<ul class="buttons stacked">
-								<li><a href="#main" class="button fit scrolly">Tell Me More</a></li>
+								<li><a href="#tell_more" class="button fit scrolly">Mas información</a></li>
 							</ul>
 						</footer>
 
@@ -79,16 +73,45 @@
 				<article id="main">
 
 					<header class="special container">
+						<div class = "principal-data">
+							<div class="count-collected">
+								<div id="img-trash">
+									<img src="assets/css/images/basura.png" alt="perfil" class="perfil-img" href="profesor">
+								</div>
+								<div id="content-trash">
+									<h1>80,000 kg</h1>
+									<p>Toneladas en el Oceano</p>
+								</div>
+							</div>
+							<div class="count-collected">
+								<div id="img-collected-trash">
+									<img src="assets/css/images/reciclaje.png" alt="perfil" class="perfil-img" href="profesor">
+								</div>
+								<div id="content-collected-trash">
+									<h1>100 kg</h1>
+									<p>Toneladas Recuperadas</p>
+								</div>
+							</div>
+							<div class="count-collected">
+								<div id="img-collected-money">
+									<img src="assets/css/images/money.png" alt="perfil" class="perfil-img" href="profesor">
+								</div>
+								<div id="content-collected-money">
+									<h1>$ 100,00</h1>
+									<p>Aporte del Mundo</p>
+								</div>
+							</div>
+						</div>
 						<span class="icon solid fa-chart-bar"></span>
-						<h2>As this is my <strong>twentieth</strong> freebie for HTML5 UP
+						<h2>Tu <strong>aporte</strong> puede hacer la diferencia
 						<br />
-						I decided to give it a really creative name.</h2>
-						<p>Turns out <strong>Twenty</strong> was the best I could come up with. Anyway, lame name aside,
+						se parte del proyecto de reciclaje más ambicioso de la historia.</h2>
+						<p>La <strong>política</strong> y la diplomacia no funcionó,
 						<br />
-						it's minimally designed, fully responsive, built on HTML5/CSS3,
-						and, like all my stuff,
+						pero la responsabilidad de salvar nuestros oceanos está en nuestras manos, 
+						juntos tenemos el poder de generar un gran impacto 
 						<br />
-						released for free under the <a href="http://html5up.net/license">Creative Commons Attribution 3.0</a> license. Have fun!</p>
+						la misión empieza ahora, toma la desición y <a href="http://html5up.net/license"> Súmate al cambio</a>,  que sea divertido, que sea con amigos!</p>
 					</header>
 
 					<!-- One -->
@@ -97,25 +120,25 @@
 								<div class="col-8 col-12-narrower">
 
 									<header>
-										<h2>Behold the <strong>icons</strong> that visualize what you’re all about. or just take up space. your call bro.</h2>
+										<h2>Con el objetivo de disminuir la contaminacion en el oceano del Pacifico.</h2>
 									</header>
-									<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu comteger ut fermentum lorem. Lorem ipsum dolor sit amet. Sed tristique purus vitae volutpat ultrices. eu elit eget commodo. Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo.</p>
-									<footer>
+									<p>RE-Oceans  hace uso de una embarcación automata que recolecta basura mediante una banda móvil, la cual la deposita en mallas que pueden ser recogidas por otros navíos gracias a la ubicación monitoreada en esta pagina web. Sumate a nosotros siendo parte de nuestras campañas o aportando donaciones por medio de Patron o KickStarted para que continuemos limpiando los desechos de nuestros océanos.</p>
+									<!-- <footer>
 										<ul class="buttons">
 											<li><a href="#" class="button">Find Out More</a></li>
 										</ul>
-									</footer>
+									</footer> -->
 
 								</div>
-								<div class="col-4 col-12-narrower imp-narrower">
+								<div id="tell_more" class="col-4 col-12-narrower imp-narrower">
 
 									<ul class="featured-icons">
-										<li><span class="icon fa-clock"><span class="label">Feature 1</span></span></li>
-										<li><span class="icon solid fa-volume-up"><span class="label">Feature 2</span></span></li>
-										<li><span class="icon solid fa-laptop"><span class="label">Feature 3</span></span></li>
-										<li><span class="icon solid fa-inbox"><span class="label">Feature 4</span></span></li>
-										<li><span class="icon solid fa-lock"><span class="label">Feature 5</span></span></li>
-										<li><span class="icon solid fa-cog"><span class="label">Feature 6</span></span></li>
+										<li><span class="icon solid fa-ship"><span class="label">Feature 1</span></span></li>
+										<li><span class="icon solid fa-water"><span class="label">Feature 2</span></span></li>
+										<li><span class="icon solid fa-wind"><span class="label">Feature 3</span></span></li>
+										<li><span class="icon solid fa-recycle"><span class="label">Feature 4</span></span></li>
+										<li><span class="icon solid fa-mobile"><span class="label">Feature 5</span></span></li>
+										<li><span class="icon solid fa-trash-alt"><span class="label">Feature 6</span></span></li>
 									</ul>
 
 								</div>
@@ -164,64 +187,88 @@
 					<!-- Three -->
 						<section class="wrapper style3 container special">
 
-							<header class="major">
-								<h2>Next look at this <strong>cool stuff</strong></h2>
-							</header>
-
-							<div class="row">
-								<div class="col-6 col-12-narrower">
-
-									<section>
-										<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-										<header>
-											<h3>A Really Fast Train</h3>
-										</header>
-										<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-									</section>
-
+							<div class="container">
+								<div class="container-description">
+										<h2>CONOCE QUE SE ESTÁ HACIENDO EN EL MUNDO</h2>
+										<h6>Hay muchas iniciativas de las que también puedes formar parte</h6>
+										<hr size="10px" width="50%" align="center"/>
 								</div>
-								<div class="col-6 col-12-narrower">
 
-									<section>
-										<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-										<header>
-											<h3>An Airport Terminal</h3>
-										</header>
-										<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-									</section>
-
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+								<div class="card swiper-slide">
+									<div class="card">
+										<a href ="curso"><img src="./assets/css/images/plastico.jpg" alt="foto" class="card-img" href="curso"></a>
+											<p><a href ="profesor">Mision 1</a></p>
+											<h5><a href ="curso"></a>Lanzamiento</h5>
+											<ul class ="social-media">
+												<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+												<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+												<li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+											</ul>
+									</div>
 								</div>
+										
+								<div class="card swiper-slide">
+									<div class="card">
+										<a href ="curso"><img src="./assets/css/images/plastico.jpg" alt="foto" class="card-img" href="curso"></a>
+											<p><a href ="profesor">Mision 2</a></p>
+											<h5><a href ="curso">Encuentro con el mounstro</a></h5>
+											<ul class ="social-media">
+												<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+												<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+												<li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+											</ul>
+									</div>
+								</div>
+										
+								<div class="card swiper-slide">
+									<div class="card">
+										<a href ="curso"><img src="./assets/css/images/plastico.jpg" alt="foto" class="card-img" href="curso"></a>
+											<p><a href ="profesor">Misión 3</a></p>
+											<h5><a href ="curso">Sumando personas</a></h5>
+											<ul class ="social-media">
+												<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+												<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+												<li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+											</ul>
+									</div>
+								</div>
+
+								<div class="card swiper-slide">
+									<div class="card">
+										<a href ="curso"><img src="./assets/css/images/plastico.jpg" alt="foto" class="card-img" href="curso"></a>
+											<p><a href ="profesor">Misión 4</a></p>
+											<h5><a href ="curso">Influencers</a></h5>
+											<ul class ="social-media">
+												<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+												<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+												<li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+											</ul>
+									</div>
+								</div>
+
+								<div class="card swiper-slide">
+									<div class="card">
+										<a href ="curso"><img src="./assets/css/images/plastico.jpg" alt="foto" class="card-img" href="curso"></a>
+											<p><a href ="profesor">Misión 5</a></p>
+											<h5><a href ="curso">Plan en marcha</a></h5>
+											<ul class ="social-media">
+												<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+												<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+												<li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+											</ul>
+									</div>
+								</div>   
+								
+								</div>
+								<!-- Add Pagination -->
+								<div class="swiper-pagination"></div>
+								<!-- Add Arrows -->
+								<div class="swiper-button-next"></div>
+								<div class="swiper-button-prev"></div>
 							</div>
-							<div class="row">
-								<div class="col-6 col-12-narrower">
-
-									<section>
-										<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-										<header>
-											<h3>Hyperspace Travel</h3>
-										</header>
-										<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-									</section>
-
-								</div>
-								<div class="col-6 col-12-narrower">
-
-									<section>
-										<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-										<header>
-											<h3>And Another Train</h3>
-										</header>
-										<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-									</section>
-
-								</div>
-							</div>
-
-							<footer class="major">
-								<ul class="buttons">
-									<li><a href="#" class="button">See More</a></li>
-								</ul>
-							</footer>
+							
 
 						</section>
 
@@ -231,13 +278,13 @@
 				<section id="cta">
 
 					<header>
-						<h2>Ready to do <strong>something</strong>?</h2>
-						<p>Proin a ullamcorper elit, et sagittis turpis integer ut fermentum.</p>
+						<h2>¿<strong>Listo para ser parte</strong>?</h2>
+						<p>Realiza un aporte economico o forma parte en nuestras	 redes sociales.</p>
 					</header>
 					<footer>
 						<ul class="buttons">
-							<li><a href="#" class="button primary">Take My Money</a></li>
-							<li><a href="#" class="button">LOL Wut</a></li>
+							<li><a href="#" class="button primary">CONTRIBUIR</a></li>
+							<li><a href="#" class="button">SEGUIR EN REDES SOCIALES</a></li>
 						</ul>
 					</footer>
 
@@ -263,6 +310,8 @@
 		</div>
 
 		<!-- Scripts -->
+			<script src="assets/slide/js/swiper.min.js"></script>
+			<script src="assets/slide/js/swiper.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
